@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 46 139 87;   /* #2E8B57 */
+    --color-primary-dark: 31 111 74; /* #1F6F4A */
+    --color-primary-light: 60 179 113; /* #3CB371 */
+    --color-accent: 255 215 0;    /* #FFD700 */
+  }
+
+  /* Base typography */
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  /* Links */
+  a {
+    @apply text-green-600 hover:text-green-700 transition-colors;
+  }
+
+  /* Prose content styling */
+  .prose {
+    @apply max-w-none;
+  }
+
+  .prose h2 {
+    @apply mt-8 mb-4;
+  }
+
+  .prose h3 {
+    @apply mt-6 mb-3;
+  }
+
+  .prose ul {
+    @apply list-disc pl-5;
+  }
+
+  .prose ol {
+    @apply list-decimal pl-5;
+  }
+
+  .prose img {
+    @apply rounded-lg shadow-md;
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg font-medium transition-colors;
+  }
+
+  .btn-primary {
+    @apply bg-green-600 hover:bg-green-700 text-white px-6 py-3;
+  }
+
+  .btn-secondary {
+    @apply bg-white border border-green-600 text-green-600 hover:bg-green-50 px-6 py-3;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden;
+  }
+
+  .card-hover {
+    @apply card hover:shadow-md hover:border-green-300 transition-all;
+  }
+
+  /* Forms */
+  .input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500;
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-primary {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .badge-accent {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+}
+
+@layer utilities {
+  /* Animation */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Text gradient */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-green-800;
+  }
+
+  /* Scrollbar */
+  .scrollbar-custom {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.green.500') theme('colors.gray.100');
+  }
+
+  .scrollbar-custom::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    @apply bg-green-500 rounded-full;
+  }
+}

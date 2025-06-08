@@ -1,0 +1,23 @@
+@media print {
+  body {
+    @apply bg-white text-black;
+    font-size: 12pt;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .markdown-content {
+    @apply max-w-none prose-sm;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    @apply text-xs text-gray-500;
+  }
+
+  .page-break {
+    page-break-after: always;
+  }
+}

@@ -1,0 +1,48 @@
+.markdown-content {
+  @apply prose prose-lg max-w-none;
+}
+
+.markdown-content h2 {
+  @apply text-2xl font-bold mt-12 mb-6 pb-2 border-b border-gray-200;
+}
+
+.markdown-content h3 {
+  @apply text-xl font-bold mt-8 mb-4;
+}
+
+.markdown-content p {
+  @apply my-4 leading-relaxed;
+}
+
+.markdown-content ul, 
+.markdown-content ol {
+  @apply my-4 pl-6;
+}
+
+.markdown-content li {
+  @apply my-2;
+}
+
+.markdown-content blockquote {
+  @apply border-l-4 border-green-500 pl-4 italic text-gray-600 my-6;
+}
+
+.markdown-content table {
+  @apply w-full my-6 border-collapse;
+}
+
+.markdown-content th {
+  @apply bg-gray-100 text-left px-4 py-2 border border-gray-300;
+}
+
+.markdown-content td {
+  @apply px-4 py-2 border border-gray-300;
+}
+
+.markdown-content a {
+  @apply text-green-600 hover:underline;
+}
+
+.markdown-content img {
+  @apply my-6 rounded-lg shadow-md;
+}
